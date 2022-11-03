@@ -6,10 +6,11 @@
 using namespace std;
 
 int main(int argc, char *argv[] ) {
+    string arg1 = argv[1];
     if(argc == 1) {
         cout << "usage: " << argv[0] << " [ARGUMENT]" << endl;
     } else {
-        if(argv[1] == "i") {
+        if(arg1 == "i") {
             cout << "no" << endl;
         }
     }
