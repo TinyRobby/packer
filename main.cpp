@@ -10,7 +10,7 @@ int main(int argc, char *argv[] ) {
         cout << "usage: " << argv[0] << " [ARGUMENT]" << endl;
     } else {
         if(argv[1] = "i") {
-            cout << "oogabooga\n";
+            cout << "no\n";
         }
     }
 
