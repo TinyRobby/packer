@@ -22,7 +22,7 @@ A Package manager for all linux systems.
 #### Step 2: 
    clone the repository:
    
-   ``cd && git clone https://github.com/TinyRobby/packer``
+   ``git clone https://github.com/TinyRobby/packer && cd packer``
    
 #### Step 3:
   build packer
@@ -31,4 +31,4 @@ A Package manager for all linux systems.
   
 # How to contribute
   
-  If you want to contrubute, go to the "Help!" disscusion and read Our Rules[https://github.com/TinyRobby/packer/blob/main/CONTRIBUTE.md]
+  If you want to contrubute, go to the "Help!" disscusion and read Our Rules(https://github.com/TinyRobby/packer/blob/main/CONTRIBUTE.md)
