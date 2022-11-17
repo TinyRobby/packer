@@ -1,5 +1,6 @@
+#include <stdlib.h>
 #include <iostream>
-// #include <ifstream>
+#include <fstream>
 #include <curl/curl.h>
 #include "json.hpp"
 
