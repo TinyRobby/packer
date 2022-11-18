@@ -1,6 +1,6 @@
 # packer
 
-A Package manager for all linux systems.
+A Package manager for all GNU/Linux systems.
 
 ## Features
 
@@ -17,7 +17,7 @@ A Package manager for all linux systems.
 #### Step 1:
   Download the required dependencies
   
-  Debian: ``sudo apt install git libcurl-gnutls-dev build-essential make``
+  Debian: ``sudo apt install git libcurl-gnutls-dev build-essential``
   
 #### Step 2: 
    clone the repository:
