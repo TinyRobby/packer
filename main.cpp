@@ -17,7 +17,7 @@ int main(int argc, char *argv[] ) {
 			break;
         	}
 		if(input == "help") {
-			cout << "Format:\n [Command]: [Short Desc]\nhelp: this help message\ninstall: install a program\nexit: exit the program" << endl;
+			cout << "Format:\n [Command]: [Short Desc]\nhelp: this help message\ninstall: install a program\nremove: remove a program\nexit: exit the program" << endl;
 		}
     }
     return 0;
