@@ -7,14 +7,16 @@
 using namespace std;
 
 int main(int argc, char *argv[] ) {
-    string arg1 = argv[1];
-    if(argc == 1) {
-        cout << "usage: " << argv[0] << " [ARGUMENT]" << endl;
-    } else {
-        if(arg1 == "i") {
-            cout << "no" << endl;
+    string input;
+    cout << "Welcome to packer the GNU/Linux Package manager\ntype help for help\n\n" << endl;
+    while(true) {
+        cout << "[packer] >>> ";
+        cin >> input;
+        if(input == "exit") {
+            cout << "Bye!" << endl;
+            system("sleep 1");
+            break;
         }
     }
-
     return 0;
 }
