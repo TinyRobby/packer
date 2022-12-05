@@ -1,5 +1,5 @@
 packer: main.o
-	g++ -Wall -lcurl obj/main.o -o bin/packer
+	g++ -Wall obj/main.o -o bin/packer
 
 replit-packer: main.o
 	g++ -Wall obj/main.o -o bin/replit/packer

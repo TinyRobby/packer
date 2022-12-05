@@ -1,7 +1,7 @@
 #include <stdlib.h>
 #include <iostream>
 #include <fstream>
-#include <curl/curl.h>
+// #include <curl/curl.h>
 #include "json.hpp"
 
 using namespace std;
