@@ -11,7 +11,6 @@ A Package manager for all GNU/Linux systems.
 
 ### Programmed Features
   * N/A
-
 ## Build Instructions
 
 #### Step 1:
