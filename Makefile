@@ -9,6 +9,8 @@ main.o: main.cpp
 
 run: 
 	bin/packer
+# Old Makefile don't use
+
 packer: main.o
 	g++ -Wall  obj/main.o -lcurl -o bin/packer
 
