@@ -1,5 +1,0 @@
-run = "bin/replit/packer"
-compile = "make replit-packer"
-
-[nix]
-channel = "stable-21_11"

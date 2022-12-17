@@ -1,1 +1,8 @@
-
+{  
+    "Package": {  
+        "name":       "Empty",   
+        "Description":      "An empty package to test packer",
+        "Owner": "TinyRobby",
+        "installMethod":     "none" 
+    }  
+}  
