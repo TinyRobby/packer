@@ -20,7 +20,7 @@ int main(int argc, char *argv[] ) {
 		cout << "[packer] >>> ";
 		getline(cin, input);
 		if(input.empty() == false) {
-			if(input == "exit") {
+			if(input == "exit" || input == "quit") {
 					cout << "Bye!" << endl;
 					break;
 				}
