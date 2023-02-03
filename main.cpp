@@ -18,9 +18,14 @@ int main(int argc, char *argv[] ) {
 		cerr << "Error: cURL didn't load" << endl;
 		return 1;
 	}
+	if(argv[1] != NULL){
+		if(string(argv[1]) == "aaa") {
+			cout << "a" << endl;
+		}
+	}
 	// Get commands
     string input;
-    cout << "Welcome to packer the GNU/Linux Package manager\ntype help for help\n\n" << endl;
+    cout << "Welcome to packer, a pretty good package manager\ntype help for help\n\n" << endl;
     while(true) {
 		cout << "[packer] >>> ";
 		getline(cin, input);
@@ -31,6 +36,8 @@ int main(int argc, char *argv[] ) {
 				}
 			if(input == "install") {
 				cout << "install from machine or internet?" << endl;
+				string* q = new string;
+				cin >> *q;
 				
 			}
 			if(input == "help") {

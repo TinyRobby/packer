@@ -1,6 +1,4 @@
-<<<<<<< HEAD
 # Don't use this! It's an old Makefile
-=======
 packer: main.o
 	g++ -Wall  obj/main.o -lcurl -o bin/packer
 

@@ -1,5 +1,9 @@
 FROM alpine:3.14
-WORKDIR /workspaces/packer
+WORKDIR $(pwd)
 COPY . .
-RUN apk add make curl libcurl g++
-RUN make
+RUN apk add make curl libcurl g++ cmake
+RUN cd build/build
+RUN ls
+#RUN cmake ..
+#RUN make
+#RUN ./packer
