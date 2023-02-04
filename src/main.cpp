@@ -3,8 +3,9 @@
 #include <iostream>
 #include <fstream>
 #include <curl/curl.h>
-#include "Headers/json.hpp"
+#include "../Headers/json.hpp"
 #include <stumpless.h>
+#include "../Headers/funcs.h"
 
 using namespace std;
 
@@ -21,6 +22,14 @@ int main(int argc, char *argv[] ) {
 	if(argv[1] != NULL){
 		if(string(argv[1]) == "aaa") {
 			cout << "a" << endl;
+		}
+		if(string(argv[1]) == "install") {
+			if(argv[2] == NULL) {
+				argInstallNoName();
+			} else {
+				argInstall(string(argv[2]));
+			}
+			
 		}
 	}
 	// Get commands
