@@ -26,6 +26,11 @@ int main(int argc, char *argv[] ) {
 		if(string(argv[1]) == "install") {
 			if(argv[2] == NULL) {
 				argInstallNoName();
+					cout << "install from machine or internet?" << endl;
+					int* q = new int;
+					cout << "1) Machine\n2) Internet" << endl;
+					cin >> *q;
+					
 			} else {
 				argInstall(string(argv[2]));
 			}
