@@ -6,8 +6,11 @@
 #include "../Headers/json.hpp"
 #include <stumpless.h>
 #include "../Headers/funcs.h"
+#include <filesystem>
 
 using namespace std;
+namespace fs = std::filesystem;
+
 
 int main(int argc, char *argv[] ) {
 	stumpless_target* file_target = stumpless_open_file_target("packer.log");
@@ -27,10 +30,33 @@ int main(int argc, char *argv[] ) {
 			if(argv[2] == NULL) {
 				argInstallNoName();
 					cout << "install from machine or internet?" << endl;
-					int* q = new int;
+					int q;
+					string d;
 					cout << "1) Machine\n2) Internet" << endl;
-					cin >> *q;
-					
+					cin >> q;
+					switch(q) {
+						case 1: {
+							cout << "Where is the json/pak file? >> ";
+							cin >> d;
+							string dir[255];
+							int i = 0;
+							for (const auto & entry : fs::directory_iterator(d)) {
+									dir[i] = entry.path();
+									i++;
+							}
+							for(int j; j <= i; j++) {
+								
+							}
+							break;
+						}
+						case 2: {
+							
+						}
+						default: {
+							cout << "Unrecognised response.";
+							break;
+						}
+					}
 			} else {
 				argInstall(string(argv[2]));
 			}
