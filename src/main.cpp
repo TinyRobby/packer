@@ -5,9 +5,9 @@
 #include <curl/curl.h>
 #include "../Headers/json.hpp"
 #include <stumpless.h>
-#include "../Headers/funcs.h"
+#include <regex>
 #include <filesystem>
-
+#include "../Headers/funcs.h"
 using namespace std;
 namespace fs = std::filesystem;
 
@@ -29,34 +29,6 @@ int main(int argc, char *argv[] ) {
 		if(string(argv[1]) == "install") {
 			if(argv[2] == NULL) {
 				argInstallNoName();
-					cout << "install from machine or internet?" << endl;
-					int q;
-					string d;
-					cout << "1) Machine\n2) Internet" << endl;
-					cin >> q;
-					switch(q) {
-						case 1: {
-							cout << "Where is the json/pak file? >> ";
-							cin >> d;
-							string dir[255];
-							int i = 0;
-							for (const auto & entry : fs::directory_iterator(d)) {
-									dir[i] = entry.path();
-									i++;
-							}
-							for(int j; j <= i; j++) {
-								
-							}
-							break;
-						}
-						case 2: {
-							
-						}
-						default: {
-							cout << "Unrecognised response.";
-							break;
-						}
-					}
 			} else {
 				argInstall(string(argv[2]));
 			}
@@ -100,3 +72,4 @@ int main(int argc, char *argv[] ) {
     }
     return 0;
 }
+
