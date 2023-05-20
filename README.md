@@ -10,13 +10,15 @@ A Package manager for all GNU/Linux systems.
   * can be used without superuser privlages
 
 ### Programmed Features
-  * N/A
+  * Basic arguments and filesystem access
 ## Build Instructions
 
 #### Step 1:
   Download the required dependencies
   
-  Debian: ``sudo apt install git libcurl-gnutls-dev build-essential``
+  libcURL: [source gzip](https://curl.se/download/curl-8.1.0.tar.gz), [source zip](https://curl.se/download/curl-8.1.0.zip)  
+  
+  Stumpless: [Source Code](https://github.com/goatshriek/stumpless/archive/refs/tags/v2.1.0.tar.gz)  
   
 #### Step 2: 
    clone the repository:
