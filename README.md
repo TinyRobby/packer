@@ -19,6 +19,8 @@ A Package manager for all GNU/Linux systems.
   libcURL: [source gzip](https://curl.se/download/curl-8.1.0.tar.gz), [source zip](https://curl.se/download/curl-8.1.0.zip)  
   
   Stumpless: [Source Code](https://github.com/goatshriek/stumpless/archive/refs/tags/v2.1.0.tar.gz)  
+    
+  CMake: [UNIX Source](https://github.com/Kitware/CMake/releases/download/v3.26.4/cmake-3.26.4.tar.gz), [Windows Source](https://github.com/Kitware/CMake/releases/download/v3.26.4/cmake-3.26.4.zip)
   
 #### Step 2: 
    clone the repository:
@@ -28,7 +30,7 @@ A Package manager for all GNU/Linux systems.
 #### Step 3:
   build packer
   
-  ``make && sudo make install``
+  ``./build.sh``
   
 # How to contribute
   
