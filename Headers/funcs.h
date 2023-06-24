@@ -1,6 +1,6 @@
 #ifndef FUNCS_H
 #define FUNCS_H
- 
+#include <filesystem>
 int argInstallNoName() {
 	std::cout << "install from machine or internet?" << std::endl;
 					int c;
@@ -22,10 +22,10 @@ int argInstallNoName() {
 							}
 							while(j != dirSize) {
 								if(
-								std::regex_match(dir[j], std::regex(".*\.pak")) 
-								|| 
-								std::regex_match(dir[j], std::regex(".*\.json")) 
-								&& 
+								std::regex_match(dir[j], std::regex(".*\\.pak"))
+								||
+								std::regex_match(dir[j], std::regex(".*\\.json"))
+								&&
 								dir[j] != "") {
 									std::cout << "one found on file " << j << "of file array" << std::endl;
 									c++;
@@ -38,7 +38,7 @@ int argInstallNoName() {
 							if(c > 0) {return 0;}else{return 1;}
 						}
 						case 2: {
-							
+
 						}
 						default: {
 							std::cout << "Unrecognised response.";
@@ -47,6 +47,6 @@ int argInstallNoName() {
 					}
 }
 int argInstall(std::string pkg) {
-	
+
 }
 #endif

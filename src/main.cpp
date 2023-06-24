@@ -6,15 +6,12 @@
 #include "../Headers/json.hpp"
 #include <stumpless.h>
 #include <regex>
-#include <filesystem>
 #include "../Headers/funcs.h"
 using namespace std;
-namespace fs = std::filesystem;
-
 
 int main(int argc, char *argv[] ) {
 	stumpless_target* file_target = stumpless_open_file_target("packer.log");
-	stump("Packer started"); 
+	stump("Packer started");
 	// cURL setup
 	curl_global_init(1);
 	CURL *easy_handle = curl_easy_init();
@@ -32,7 +29,7 @@ int main(int argc, char *argv[] ) {
 			} else {
 				argInstall(string(argv[2]));
 			}
-			
+
 		}
 	}
 	// Get commands
@@ -47,10 +44,25 @@ int main(int argc, char *argv[] ) {
 					break;
 				}
 			if(input == "install") {
-				cout << "install from machine or internet?" << endl;
-				string* q = new string;
-				cin >> *q;
-				
+				string a;
+				cout << "install from machine(1) or internet(2)?" << endl;
+				int q;
+				cin >> q;
+				switch(q)
+				{
+				case 0:
+					argInstallNoName();
+					break;
+				case 1:
+					emptie: cout << "Error: No Name." << endl;
+					cout << "Package name?";
+					getline(cin, a);
+					if(a == "") {
+						goto emptie;
+					}
+					argInstall(a);
+					break;
+				}
 			}
 			if(input == "help") {
 				cout << "Format:\n [Command]: [Short Desc]\nhelp: this help message\ninstall: install a program\nremove: remove a program\nexit/quit: exit the program\ngen-config: generate a config file if none is present\n" << endl;
