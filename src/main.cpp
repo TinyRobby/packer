@@ -7,9 +7,19 @@
 #include <stumpless.h>
 #include <regex>
 #include "../Headers/funcs.h"
+#include <libconfig.h++>
 using namespace std;
+using namespace libconfig;
 
 int main(int argc, char *argv[] ) {
+	Config config;
+	try {
+		config.readFile("packer.cfg");
+	} catch(const FileIOException &fioex) {
+		cerr << "I/O error while reading config" << endl;
+		stump("I/O error while accessing config file");
+		return(EXIT_FAILURE);
+	}
 	stumpless_target* file_target = stumpless_open_file_target("packer.log");
 	stump("Packer started");
 	// cURL setup
