@@ -1,4 +1,5 @@
 #include <stdlib.h>
+#include <sstream>
 #include <string>
 #include <iostream>
 #include <fstream>
@@ -19,7 +20,12 @@ int main(int argc, char *argv[] ) {
 		cerr << "I/O error while reading config" << endl;
 		stump("I/O error while accessing config file");
 		return(EXIT_FAILURE);
-	}
+	} catch(const ParseException &pex)
+  	{
+    	cerr << "Parse error at " << pex.getFile() << ":" << pex.getLine() << " - " << pex.getError() << std::endl;
+    	stump("Parse error in config file");
+		return(EXIT_FAILURE);
+  }
 	stumpless_target* file_target = stumpless_open_file_target("packer.log");
 	stump("Packer started");
 	// cURL setup
